@@ -501,6 +501,12 @@ textarea {
 
 @media screen and (max-width: 1000px) {
   .slider_block .slider_arrows .slider_arrow_prev svg, .slider_block .slider_arrows .slider_arrow_next svg {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .slider_block .slider_arrows .slider_arrow_prev, .slider_block .slider_arrows .slider_arrow_next {
     width: 20px;
   }
 }
