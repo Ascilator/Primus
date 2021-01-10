@@ -720,8 +720,12 @@ textarea {
     width: 30px;
     height: 30px;
   }
+  .catalog .categoty_row .category_item .btn a, .catalog .category_row_big .category_item .btn a {
+    display: block;
+    width: 14px;
+  }
   .catalog .categoty_row .category_item .btn svg, .catalog .category_row_big .category_item .btn svg {
-    width: 80%;
+    width: 100%;
   }
 }
 
