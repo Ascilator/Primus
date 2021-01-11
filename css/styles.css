@@ -66,6 +66,7 @@ textarea {
 
 .big_wrapper {
   overflow: hidden;
+  position: relative;
 }
 
 .slick-list {
@@ -714,6 +715,27 @@ textarea {
           justify-content: center;
 }
 
+.catalog .categoty_row .category_item .btn svg, .catalog .categoty_row .category_item .btn path, .catalog .category_row_big .category_item .btn svg, .catalog .category_row_big .category_item .btn path {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.catalog .categoty_row .category_item .btn a, .catalog .category_row_big .category_item .btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.catalog .categoty_row .category_item .btn:hover svg, .catalog .categoty_row .category_item .btn:hover path, .catalog .category_row_big .category_item .btn:hover svg, .catalog .category_row_big .category_item .btn:hover path {
+  stroke: #000;
+}
+
 @media screen and (max-width: 650px) {
   .catalog .categoty_row .category_item .btn, .catalog .category_row_big .category_item .btn {
     margin-top: 20px;
@@ -721,7 +743,6 @@ textarea {
     height: 30px;
   }
   .catalog .categoty_row .category_item .btn a, .catalog .category_row_big .category_item .btn a {
-    display: block;
     width: 14px;
   }
   .catalog .categoty_row .category_item .btn svg, .catalog .category_row_big .category_item .btn svg {
@@ -985,6 +1006,15 @@ textarea {
   color: #000000;
 }
 
+.prefooter_part .wrapper .banner .know_more a {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.prefooter_part .wrapper .banner .know_more a:hover {
+  font-size: 18px;
+}
+
 @media screen and (max-width: 1000px) {
   .prefooter_part .wrapper .banner {
     margin: 0 0 0 auto;
@@ -1228,7 +1258,7 @@ textarea {
 
 .card .main_part .left_part .big_slider .slider_item {
   height: 100%;
-  background: #C4C4C4;
+  background: #fff;
   text-align: center;
 }
 
@@ -1262,7 +1292,7 @@ textarea {
           flex: 0 0 65px;
   width: 65px;
   height: 65px;
-  background: #C4C4C4;
+  background: #fff;
   text-align: center;
   border: 1.5px solid #0000;
 }
@@ -1425,6 +1455,10 @@ textarea {
   cursor: pointer;
 }
 
+.card .main_part .right_part .block_footer .like._active svg, .card .main_part .right_part .block_footer .like._active path {
+  fill: #D11E1E;
+}
+
 .card .main_part .right_part .block_footer .add_to_cart {
   cursor: pointer;
   -webkit-box-flex: 0;
@@ -1581,6 +1615,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 10px;
 }
 
 .catalog .catalog_cont .wrapper .catalog_item .non_img .color_cont .color_item {
@@ -1609,6 +1644,7 @@ textarea {
   display: block;
   color: #000000;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .catalog .catalog_cont .wrapper .catalog_item .non_img .price {
@@ -1616,12 +1652,12 @@ textarea {
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .catalog .catalog_cont .wrapper .catalog_item .non_img .buy_btn {
-  margin: 20px auto 0;
+  margin: 10px auto 0;
   max-width: 172px;
   height: 32px;
   background: #FFE600;
@@ -1636,6 +1672,11 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.catalog .catalog_cont .wrapper .catalog_item .non_img .buy_btn._active {
+  background: #FFFFFF;
+  border: 2px solid #FFE600;
 }
 
 .catalog .catalog_cont .wrapper .catalog_item .heart {
@@ -1653,6 +1694,15 @@ textarea {
 
 .catalog .catalog_cont .wrapper .catalog_item .heart._active svg, .catalog .catalog_cont .wrapper .catalog_item .heart._active path {
   fill: #D11E1E;
+}
+
+.catalog .catalog_cont .wrapper .catalog_item._cloned {
+  position: fixed;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 900px) {
@@ -1989,10 +2039,10 @@ main {
 .your_choice .big_form .wrapper .choose_item .icon {
   margin-right: 5px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 15px;
-          flex: 0 0 15px;
-  height: 15px;
-  width: 15px;
+      -ms-flex: 0 0 16px;
+          flex: 0 0 16px;
+  height: 16px;
+  width: 16px;
   background: #FFFFFF;
   border: 0.3px solid #000000;
   border-radius: 50%;
@@ -2008,8 +2058,8 @@ main {
   border-radius: 50%;
   left: 50%;
   position: absolute;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   display: block;
   background: #383838;
   -webkit-transform: translate(-50%, -50%);
@@ -2062,6 +2112,38 @@ main {
   font-size: 16px;
   padding: 0 0 0 10px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.your_choice .big_form .wrapper .input_item .input._error:after {
+  content: '';
+  top: 50%;
+  right: -10px;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  display: block;
+  position: absolute;
+  background: url("../img/error.png");
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+}
+
+.your_choice .big_form .wrapper .input_item .input._sucsess:after {
+  content: '';
+  top: 50%;
+  right: -10px;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  display: block;
+  position: absolute;
+  background: url("../img/sucsess.png");
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+}
+
+.your_choice .big_form .wrapper .input_item .input._tel input {
+  font-family: 'Roboto', sans-serif;
 }
 
 .your_choice .big_form .wrapper .input_item .star {
@@ -2475,6 +2557,20 @@ main {
           align-items: center;
 }
 
+.liked .wrapper .catalog_item .non_img .buy_btn._active {
+  background: #FFFFFF;
+  border: 2px solid #FFE600;
+}
+
+.liked .wrapper .catalog_item._cloned {
+  position: fixed;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  margin: 0;
+}
+
 .liked .wrapper .catalog_item .heart {
   position: absolute;
   top: 0;
@@ -2484,6 +2580,10 @@ main {
 
 .liked .wrapper .catalog_item .heart svg {
   width: 32px;
+}
+
+.liked .wrapper .catalog_item .heart._active svg, .liked .wrapper .catalog_item .heart._active path {
+  fill: #D11E1E;
 }
 
 @media screen and (max-width: 900px) {
