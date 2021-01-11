@@ -76,9 +76,94 @@
 
         $(this).toggleClass('_active');
     })
+    $('.like').click(function () {
+
+        $(this).toggleClass('_active');
+    })
+    $('.buy_btn').click(function () {
+
+        if ($(this).hasClass('_active') == false) {
+
+            var cart = $('.cntrl.user');
+            var cloned = $(this).parent().parent().clone();
+            cloned.addClass('_cloned');
+            cloned.insertAfter($(this).parent().parent());
+
+            cloned.css({
+                'left': $(this).parent().parent().position().left,
+                'top': $(this).parent().parent().position().top,
+            });
+            go_to_cart();
+
+
+        }
+        function do_n() { }
+        $(this).addClass('_active');
+        $(this).text('В корзине');
 
 
 
+
+
+        function go_to_cart() {
+            if ($('html').width() > 1000) {
+                cloned.css({
+                    'left': cart.parent().parent().offset().left + $('.header>.wrapper').offset().left + 20,
+                    'transform': 'translate(0%, 0) scale(0)',
+                    'top': cart.parent().parent().offset().top,
+                    'opacity': '0'
+                });
+            } else {
+                cloned.css({
+                    'left': '100%',
+                    'transform': 'translate(-100%, 0) scale(0)',
+                    'top': cart.parent().parent().offset().top,
+                    'opacity': '0'
+                });
+            }
+
+        };
+    })
+    $('.big_form').on('submit', function (e) {
+        e.preventDefault();
+        var inputs = $('.input._req');
+        for (var i = 0; i < inputs.lenght; i++) {
+            if (inputs[i].hasClass('_error')) {
+                return;
+            }
+        }
+        $('.big_form')[0].reset();
+
+    });
+    function validate() {
+
+        console.log($('.input._req').not('_tel').children())
+        $('.input._req').not('._tel').children('input').on('blur', function () {
+
+            if ($(this).val() == '') {
+                $(this).parent().addClass('_error');
+            } else {
+                $(this).parent().removeClass('_error');
+                $(this).parent().addClass('_sucsess');
+            }
+        });
+        $('.input._req._tel').children('input').on('blur', function () {
+
+
+
+
+            if ($(this).val() == '' || $(this).val()[0] != '+' || $(this).val().length != 13) {
+
+
+                $(this).parent().addClass('_error');
+            } else {
+                $(this).parent().removeClass('_error');
+		$(this).parent().addClass('_sucsess');
+            }
+        });
+
+    }
+    validate();
     function drop_down() {
         $('.filter_drop_down_title').click(function () {
             $(this).siblings('.drop_down_body').slideToggle();

@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Primus</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="fonts/raleway/stylesheet.css">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/styles.css">
@@ -17,9 +19,17 @@
 				<div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
 				<div class="menu">
 					<div class="menu_item _dropped">
-						<a href="#">Каталог</a>
+						<a href="#" class="drop_title">Каталог</a>
 						<div class="drop_body">
-							<div class="drop_link"></div>
+							<div class="drop_link"><a href="#">Стулья для дома</a></div>
+							<div class="drop_link"><a href="#">Стулья для офиса</a></div>
+							<div class="drop_link"><a href="#">Игровые стулья</a></div>
+
+							<div class="drop_link"><a href="#">Стулья для руководителей</a></div>
+							<div class="drop_link"><a href="#">Стулья из натуральной кожи</a></div>
+							<div class="drop_link"><a href="#">Столы</a></div>
+							<div class="drop_link"><a href="#">Аксессуары</a></div>
+							<div class="drop_link"><a href="#">Диваны</a></div>
 						</div>
 					</div>
 					<div class="menu_item"><a href="#">О компании</a></div>
@@ -96,10 +106,10 @@
 					<div class="wrapper">
 						<div class="good_item">
 							<div class="non_cross">
-								<div class="img_n_name">
+								<a href="#" class="img_n_name">
 									<div class="img"></div>
 									<div class="name">Chairman game 20</div>
-								</div>
+								</a>
 								<div class="color">Цвет: Красный</div>
 								<div class="size">Размер: 90х60х90</div>
 								<div class="material">Материал: Эко-кожа</div>
@@ -122,10 +132,10 @@
 						</div>
 						<div class="good_item">
 							<div class="non_cross">
-								<div class="img_n_name">
+								<a href="#" class="img_n_name">
 									<div class="img"></div>
 									<div class="name">Chairman game 20</div>
-								</div>
+								</a>
 								<div class="color">Цвет: Красный</div>
 								<div class="size">Размер: 90х60х90</div>
 								<div class="material">Материал: Эко-кожа</div>
@@ -148,10 +158,10 @@
 						</div>
 						<div class="good_item">
 							<div class="non_cross">
-								<div class="img_n_name">
+								<a href="#" class="img_n_name">
 									<div class="img"></div>
 									<div class="name">Chairman game 20</div>
-								</div>
+								</a>
 								<div class="color">Цвет: Красный</div>
 								<div class="size">Размер: 90х60х90</div>
 								<div class="material">Материал: Эко-кожа</div>
@@ -190,9 +200,9 @@
 						<div class="form_title">Заполните форму для оформления заказа :</div>
 						<div class="first_block">
 							<div class="left_part">
-								<div class="part_title">Личные данные</div>
+								<div class="part_title">Личные данные :</div>
 								<div class="input_item">
-									<div class="input">
+									<div class="input _req">
 										<input type="text" placeholder="Фамилия" required>
 									</div>
 									<div class="star">
@@ -208,7 +218,7 @@
 									</div>
 								</div>
 								<div class="input_item">
-									<div class="input">
+									<div class="input _req">
 										<input type="text" placeholder="Имя" required>
 									</div>
 									<div class="star">
@@ -224,7 +234,7 @@
 									</div>
 								</div>
 								<div class="input_item">
-									<div class="input">
+									<div class="input _req">
 										<input type="text" placeholder="Отчество" required>
 									</div>
 									<div class="star">
@@ -243,14 +253,14 @@
 							<div class="right_part">
 								<div class="part_title">Комментарий :</div>
 								<textarea>
-									Введите желаемую дату и время доставки. Ваши пожелания к доставке
+									Введите желаемую дату и время доставки. Ваши пожелания к доставке.
 								</textarea>
 							</div>
 						</div>
 						<div class="other_form">
 							<div class="part_title">Телефон</div>
-							<div class="input_item">
-								<div class="input">
+							<div class="input_item ">
+								<div class="input _req _tel">
 									<input type="text" placeholder="+375445477232" required>
 								</div>
 								<div class="star">
@@ -293,7 +303,7 @@
 								</div>
 							</div>
 							<div class="how_to_pay">
-								<div class="part_title">Выберите способ доставки :</div>
+								<div class="part_title">Выберите способ оплаты :</div>
 								<div class="choose_item">
 									<div class="icon"></div>
 									<div class="text">Наличными при получении</div>
@@ -303,7 +313,7 @@
 									<div class="text">Банковской картой онлайн</div>
 								</div>
 							</div>
-							<div class="desc">Для оптимизации работы, укажите сумму с которой нужна будет сдача</div>
+							<div class="desc">Для оптимизации работы, укажите сумму с которой нужна будет сдача :</div>
 							<div class="input_item _price">
 								<div class="input">
 									<input type="text" placeholder="8888р.">
