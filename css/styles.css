@@ -2535,7 +2535,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .liked .wrapper .catalog_item .non_img .color_cont .color_item {
@@ -2561,9 +2561,10 @@ main {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+  display: block;
   color: #000000;
   text-align: center;
-  display: block;
+  margin-bottom: 6px;
 }
 
 .liked .wrapper .catalog_item .non_img .price {
@@ -2571,12 +2572,12 @@ main {
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .liked .wrapper .catalog_item .non_img .buy_btn {
-  margin: 20px auto 0;
+  margin: 10px auto 0;
   max-width: 172px;
   height: 32px;
   background: #FFE600;
