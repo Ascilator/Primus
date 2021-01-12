@@ -1648,7 +1648,7 @@ textarea {
   display: block;
   color: #000000;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .catalog .catalog_cont .wrapper .catalog_item .non_img .price {
@@ -2211,6 +2211,7 @@ main {
   .your_choice .big_form .wrapper .first_block {
     display: block;
     margin-bottom: 20px;
+    padding-right: 50px;
   }
 }
 
@@ -2230,15 +2231,46 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: -7px -4px 17px;
+  position: relative;
 }
 
 .your_choice .big_form .wrapper .other_form .input_item_2 .input_item {
   margin: 0 4px;
+  position: unset;
+}
+
+.your_choice .big_form .wrapper .other_form .input_item_2._error:after {
+  content: '';
+  top: 50%;
+  right: -7px;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  display: block;
+  position: absolute;
+  background: url("../img/error.png");
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+}
+
+.your_choice .big_form .wrapper .other_form .input_item_2._sucsess:after {
+  content: '';
+  top: 50%;
+  right: -7px;
+  -webkit-transform: translate(calc(100% + 5px), -50%);
+          transform: translate(calc(100% + 5px), -50%);
+  display: block;
+  position: absolute;
+  background: url("../img/sucsess.png");
+  width: 24px;
+  height: 24px;
+  background-size: contain;
 }
 
 @media screen and (max-width: 770px) {
   .your_choice .big_form .wrapper .other_form {
     max-width: 100%;
+    padding-right: 50px;
   }
 }
 

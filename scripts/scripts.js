@@ -139,12 +139,29 @@
 
         console.log($('.input._req').not('_tel').children())
         $('.input._req').not('._tel').children('input').on('blur', function () {
-
-            if ($(this).val() == '') {
-                $(this).parent().addClass('_error');
+            if (!$(this).parent().hasClass('_groupe')) {
+                if ($(this).val() == '') {
+                    $(this).parent().addClass('_error');
+                    $(this).parent().removeClass('_sucsess');
+                } else {
+                    $(this).parent().removeClass('_error');
+                    $(this).parent().addClass('_sucsess');
+                }
             } else {
-                $(this).parent().removeClass('_error');
-                $(this).parent().addClass('_sucsess');
+                var tf = 0;
+                for (var i = 0; i < $('.input._req._groupe').length; i++) {
+
+                    if ($('.input._req._groupe').eq(i).children().val() == '') {
+                        $('.input_item_2').addClass('_error');
+                        $('.input_item_2').removeClass('_sucsess');
+                    } else {
+                        tf++;
+                    }
+                }
+                if (tf == 3) {
+                    $('.input_item_2').removeClass('_error');
+                    $('.input_item_2').addClass('_sucsess');
+                }
             }
         });
         $('.input._req._tel').children('input').on('blur', function () {
@@ -158,7 +175,7 @@
                 $(this).parent().addClass('_error');
             } else {
                 $(this).parent().removeClass('_error');
-		$(this).parent().addClass('_sucsess');
+                $(this).parent().addClass('_sucsess');
             }
         });
 
