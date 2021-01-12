@@ -158,6 +158,7 @@
                 $(this).parent().addClass('_error');
             } else {
                 $(this).parent().removeClass('_error');
+		$(this).parent().addClass('_sucsess');
             }
         });
 

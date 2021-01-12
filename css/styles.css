@@ -69,6 +69,10 @@ textarea {
   position: relative;
 }
 
+.big_wrapper._roboto * {
+  font-family: 'Roboto', sans-serif;
+}
+
 .slick-list {
   overflow: hidden;
 }
@@ -732,10 +736,6 @@ textarea {
           justify-content: center;
 }
 
-.catalog .categoty_row .category_item .btn:hover svg, .catalog .categoty_row .category_item .btn:hover path, .catalog .category_row_big .category_item .btn:hover svg, .catalog .category_row_big .category_item .btn:hover path {
-  stroke: #000;
-}
-
 @media screen and (max-width: 650px) {
   .catalog .categoty_row .category_item .btn, .catalog .category_row_big .category_item .btn {
     margin-top: 20px;
@@ -748,6 +748,10 @@ textarea {
   .catalog .categoty_row .category_item .btn svg, .catalog .category_row_big .category_item .btn svg {
     width: 100%;
   }
+}
+
+.catalog .categoty_row .category_item:hover .btn svg, .catalog .categoty_row .category_item:hover .btn path, .catalog .category_row_big .category_item:hover .btn svg, .catalog .category_row_big .category_item:hover .btn path {
+  stroke: #000;
 }
 
 @media screen and (max-width: 650px) {
@@ -2132,13 +2136,13 @@ main {
   content: '';
   top: 50%;
   right: -10px;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
+  -webkit-transform: translate(calc(100% + 5px), -50%);
+          transform: translate(calc(100% + 5px), -50%);
   display: block;
   position: absolute;
   background: url("../img/sucsess.png");
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background-size: contain;
 }
 
